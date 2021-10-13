@@ -2,6 +2,7 @@ import '../css/style.css';
 import './plugins';
 import locations from './store/locations';
 import formUI from './views/form';
+import ticketsUI from './views/tickets';
 import currencyUI from './views/currency';
 
 document.addEventListener('DOMContentLoaded', e => {
@@ -35,6 +36,14 @@ document.addEventListener('DOMContentLoaded', e => {
       currency,
     });
 
+    ticketsUI.renderTickets(locations.lastSearch);
     console.log(locations.lastSearch);
   }
 });
+
+// *1 - создать отдельный метод для получения airlines
+// *2 - в init добавить получение airlines
+// *3 - serializeAirlines
+// *4 - serializeTickets и переделать serializeCities и createShortCities и getCityCodeByKey
+// *5 - новые методы getAirlineNameByCode, getAirlineLogoByCode, getCityNameByCode
+// *6 - TicketsUI
